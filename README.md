@@ -1,4 +1,5 @@
 <a name="module_to-string-x"></a>
+
 ## to-string-x
 <a href="https://travis-ci.org/Xotic750/to-string-x"
 title="Travis status">
@@ -39,11 +40,12 @@ es5-shim.js to be able to work properly.
 `es6.shim.js` provides compatibility shims so that legacy JavaScript engines
 behave as closely as possible to ECMAScript 6 (Harmony).
 
-**Version**: 1.0.5  
+**Version**: 1.1.0  
 **Author:** Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
 <a name="exp_module_to-string-x--module.exports"></a>
+
 ### `module.exports(value)` ⇒ <code>string</code> ⏏
 The abstract operation ToString converts argument to a value of type
 String.
