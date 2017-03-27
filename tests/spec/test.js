@@ -15,9 +15,7 @@
 
   'use strict';
 
-  var hasSymbol = typeof Symbol === 'function' && typeof Symbol() === 'symbol',
-    ifSymbolIt = hasSymbol ? it : xit,
-    $toString;
+  var $toString;
   if (typeof module === 'object' && module.exports) {
     require('es5-shim');
     require('es5-shim/es5-sham');
@@ -38,6 +36,9 @@
     $toString = returnExports;
   }
 
+  var hasSymbol = typeof Symbol === 'function' && typeof Symbol() === 'symbol';
+  var ifSymbolIt = hasSymbol ? it : xit;
+
   describe('Basic tests', function () {
     it('should return a string for everything', function () {
       var values = [true, 'abc', 1, null, undefined, function () {}, [], /r/],
@@ -51,8 +52,9 @@
       expect(function () {
         $toString(sym);
       }).toThrow();
+      var symObj = Object(sym);
       expect(function () {
-        $toString(Object(sym));
+        $toString(Object(symObj));
       }).toThrow();
     });
   });
