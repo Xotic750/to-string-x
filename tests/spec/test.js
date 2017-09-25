@@ -27,18 +27,25 @@ var ifSymbolIt = hasSymbol ? it : xit;
 describe('Basic tests', function () {
   it('should return a string for everything', function () {
     var values = [
-        true,
-        'abc',
-        1,
-        null,
-        undefined,
-        function () {},
-        [],
-        /r/
-      ],
-      expected = values.map(String),
-      actual = values.map($toString);
+      true,
+      'abc',
+      1,
+      null,
+      undefined,
+      function () {},
+      [],
+      /r/
+    ];
+
+    var expected = values.map(String);
+    var actual = values.map($toString);
     expect(actual).toEqual(expected);
+  });
+
+  it('should throw for Object.create(null)', function () {
+    expect(function () {
+      $toString(Object.create(null));
+    }).toThrow();
   });
 
   ifSymbolIt('should throw for Symbol', function () {
@@ -46,6 +53,7 @@ describe('Basic tests', function () {
     expect(function () {
       $toString(sym);
     }).toThrow();
+
     var symObj = Object(sym);
     expect(function () {
       $toString(Object(symObj));

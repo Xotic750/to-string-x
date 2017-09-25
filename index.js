@@ -28,6 +28,7 @@ var isSymbol = require('is-symbol');
  * $toString(Symbol('foo')); // TypeError
  * $toString(Symbol.iterator); // TypeError
  * $toString(Object(Symbol.iterator)); // TypeError
+ * $toString(Object.create(null)); // TypeError
  */
 module.exports = function ToString(value) {
   if (isSymbol(value)) {

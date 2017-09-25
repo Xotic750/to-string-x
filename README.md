@@ -55,4 +55,5 @@ $toString(true); // 'true'
 $toString(Symbol('foo')); // TypeError
 $toString(Symbol.iterator); // TypeError
 $toString(Object(Symbol.iterator)); // TypeError
+$toString(Object.create(null)); // TypeError
 ```
