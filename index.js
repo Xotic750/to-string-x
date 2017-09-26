@@ -1,7 +1,7 @@
 /**
  * @file ES6-compliant shim for ToString.
  * @see {@link http://www.ecma-international.org/ecma-262/6.0/#sec-tostring|7.1.12 ToString ( argument )}
- * @version 1.4.2
+ * @version 1.4.3
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -10,7 +10,7 @@
 
 'use strict';
 
-var castString = ''.constructor;
+var castString = require('cached-constructors-x').String;
 var isSymbol = require('is-symbol');
 
 /**
