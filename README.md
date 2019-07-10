@@ -25,6 +25,7 @@
 ES6-compliant shim for ToString.
 
 **See**: [7.1.12 ToString ( argument )](http://www.ecma-international.org/ecma-262/6.0/#sec-tostring)  
+
 <a name="exp_module_to-string-x--module.exports"></a>
 
 ### `module.exports(value)` ⇒ <code>string</code> ⏏
