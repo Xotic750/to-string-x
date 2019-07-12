@@ -1,13 +1,14 @@
 /*!
 {
+  "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-present",
-  "date": "2019-07-10T12:22:07.292Z",
+  "date": "2019-07-12T11:51:51.259Z",
   "describe": "",
   "description": "ES6-compliant shim for ToString.",
   "file": "to-string-x.js",
-  "hash": "3995b4f2f8935d0ac37f",
+  "hash": "2351d1d9eceb37aa7593",
   "license": "MIT",
-  "version": "2.0.3"
+  "version": "2.0.4"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -119,42 +120,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = ToString;
-
-var _isSymbol = _interopRequireDefault(__webpack_require__(1));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * The abstract operation ToString converts argument to a value of type String.
- *
- * @param {*} [value] - The value to convert to a string.
- * @throws {TypeError} If `value` is a Symbol.
- * @returns {string} The converted value.
- */
-function ToString(value) {
-  if ((0, _isSymbol.default)(value)) {
-    throw new TypeError('Cannot convert a Symbol value to a string');
-  }
-
-  return ''.constructor(value);
-}
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -193,6 +163,36 @@ if (hasSymbols) {
 		return  false && false;
 	};
 }
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ToString; });
+/* harmony import */ var is_symbol__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var is_symbol__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(is_symbol__WEBPACK_IMPORTED_MODULE_0__);
+
+var ERROR_MESSAGE = 'Cannot convert a Symbol value to a string';
+var castString = ERROR_MESSAGE.constructor;
+/**
+ * The abstract operation ToString converts argument to a value of type String.
+ *
+ * @param {*} [value] - The value to convert to a string.
+ * @throws {TypeError} If `value` is a Symbol.
+ * @returns {string} The converted value.
+ */
+
+function ToString(value) {
+  if (is_symbol__WEBPACK_IMPORTED_MODULE_0___default()(value)) {
+    throw new TypeError(ERROR_MESSAGE);
+  }
+
+  return castString(value);
+}
+
 
 
 /***/ }),
