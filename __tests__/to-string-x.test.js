@@ -1,7 +1,6 @@
 import noop from 'lodash/noop';
 import $toString from 'src/to-string-x';
 
-/* eslint-disable-next-line compat/compat */
 const hasSymbol = typeof Symbol === 'function' && typeof Symbol('') === 'symbol';
 const ifSymbolIt = hasSymbol ? it : xit;
 
@@ -24,7 +23,7 @@ describe('basic tests', function() {
 
   ifSymbolIt('should throw for Symbol', function() {
     expect.assertions(2);
-    /* eslint-disable-next-line compat/compat */
+
     const sym = Symbol('foo');
     expect(function() {
       $toString(sym);
