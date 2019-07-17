@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-present",
-  "date": "2019-07-16T21:00:03.265Z",
+  "date": "2019-07-17T13:01:41.415Z",
   "describe": "",
   "description": "ES6-compliant shim for ToString.",
   "file": "to-string-x.js",
-  "hash": "2351d1d9eceb37aa7593",
+  "hash": "9957dced565eb9a5f824",
   "license": "MIT",
   "version": "2.0.18"
 }
@@ -171,7 +171,6 @@ if (hasSymbols) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ToString; });
 /* harmony import */ var is_symbol__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var is_symbol__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(is_symbol__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -185,13 +184,15 @@ var castString = ERROR_MESSAGE.constructor;
  * @returns {string} The converted value.
  */
 
-function ToString(value) {
+var ToString = function ToString(value) {
   if (is_symbol__WEBPACK_IMPORTED_MODULE_0___default()(value)) {
     throw new TypeError(ERROR_MESSAGE);
   }
 
   return castString(value);
-}
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ToString);
 
 
 

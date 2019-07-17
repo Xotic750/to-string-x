@@ -9,10 +9,12 @@ const castString = ERROR_MESSAGE.constructor;
  * @throws {TypeError} If `value` is a Symbol.
  * @returns {string} The converted value.
  */
-export default function ToString(value) {
+const ToString = function ToString(value) {
   if (isSymbol(value)) {
     throw new TypeError(ERROR_MESSAGE);
   }
 
   return castString(value);
-}
+};
+
+export default ToString;

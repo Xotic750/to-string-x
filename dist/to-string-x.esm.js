@@ -9,12 +9,14 @@ var castString = ERROR_MESSAGE.constructor;
  * @returns {string} The converted value.
  */
 
-export default function ToString(value) {
+var ToString = function ToString(value) {
   if (isSymbol(value)) {
     throw new TypeError(ERROR_MESSAGE);
   }
 
   return castString(value);
-}
+};
+
+export default ToString;
 
 //# sourceMappingURL=to-string-x.esm.js.map
