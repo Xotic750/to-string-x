@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-present",
-  "date": "2019-07-24T13:18:40.373Z",
+  "date": "2019-07-24T15:59:02.158Z",
   "describe": "",
   "description": "ES6-compliant shim for ToString.",
   "file": "to-string-x.js",
   "hash": "9957dced565eb9a5f824",
   "license": "MIT",
-  "version": "2.0.29"
+  "version": "2.0.30"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
